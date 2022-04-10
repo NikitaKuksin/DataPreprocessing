@@ -1,0 +1,78 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>18afade3-0518-4a4f-9c9e-6d6e58baff07</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>DataPreprocessing</Name>
+    <RootNamespace>DataPreprocessing</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.py" />
+    <Compile Include="SourceCode\Connection\adding_age.py" />
+    <Compile Include="SourceCode\Connection\adding_chss.py" />
+    <Compile Include="SourceCode\Connection\adding_coagulology.py" />
+    <Compile Include="SourceCode\Connection\adding_diabete.py" />
+    <Compile Include="SourceCode\Connection\adding_ef.py" />
+    <Compile Include="SourceCode\Connection\adding_height.py" />
+    <Compile Include="SourceCode\Connection\adding_la.py" />
+    <Compile Include="SourceCode\Connection\adding_mkb.py" />
+    <Compile Include="SourceCode\Connection\adding_names.py" />
+    <Compile Include="SourceCode\Connection\adding_ra.py" />
+    <Compile Include="SourceCode\Connection\adding_sex.py" />
+    <Compile Include="SourceCode\Connection\adding_weight.py" />
+    <Compile Include="SourceCode\Connection\set_data_on_file.py" />
+    <Compile Include="SourceCode\DataPreprocessing.py" />
+    <Compile Include="SourceCode\ParserHTML.py" />
+    <Compile Include="SourceCode\Parser\get_age.py" />
+    <Compile Include="SourceCode\Parser\get_chss.py" />
+    <Compile Include="SourceCode\Parser\get_coagulology.py" />
+    <Compile Include="SourceCode\Parser\get_cod.py" />
+    <Compile Include="SourceCode\Parser\get_diabete.py" />
+    <Compile Include="SourceCode\Parser\get_ef.py" />
+    <Compile Include="SourceCode\Parser\get_height.py" />
+    <Compile Include="SourceCode\Parser\get_mkb.py" />
+    <Compile Include="SourceCode\Parser\get_names.py" />
+    <Compile Include="SourceCode\Parser\get_pickles.py" />
+    <Compile Include="SourceCode\Parser\get_ra_la.py" />
+    <Compile Include="SourceCode\Parser\get_sex.py" />
+    <Compile Include="SourceCode\Parser\get_weight.py" />
+    <Compile Include="SourceCode\Parser\load_data.py" />
+    <Compile Include="SourceCode\Parser\transformation.py" />
+    <Compile Include="SourceCode\Transformation.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SourceCode\" />
+    <Folder Include="SourceCode\Connection\" />
+    <Folder Include="SourceCode\Parser\" />
+    <Folder Include="SourceCode\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="path.txt" />
+    <Content Include="SourceCode\__pycache__\Console.cpython-39.pyc" />
+    <Content Include="SourceCode\__pycache__\Transformation.cpython-39.pyc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
